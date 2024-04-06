@@ -7,7 +7,6 @@ export default  function  DayTracker ()  {
 
     const weekdays: string[] = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
 
-    // Creamos un array para almacenar los nombres de los meses
     const months: string[] = [
         'Enero',
         'Febrero',
@@ -22,8 +21,7 @@ export default  function  DayTracker ()  {
         'Noviembre',
         'Diciembre'
     ];
-
-
+    
     return (
         <div className="bg-white rounded-lg shadow-lg p-6 w-64">
             <div className="flex items-center gap-3">
