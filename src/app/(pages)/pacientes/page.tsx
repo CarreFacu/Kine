@@ -1,7 +1,17 @@
 import React from "react";
+import PacientesTabla from "@/src/app/components/PacientesTabla";
 
-export default function Pacientes(){
+export default function Pacientes({
+                                      searchParams,
+                                  }: {
+    searchParams?: {
+        query?: string;
+        page?: string;
+    };
+}){
+    const query = searchParams?.query || '';
+    const currentPage = Number(searchParams?.page) || 1;
     return(
-        <h1> Pagina Pacientes</h1>
+        <PacientesTabla  query={query} currentPage={currentPage}/>
     )
 }

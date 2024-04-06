@@ -7,6 +7,14 @@
     mail: string;
     accesses: Access[];
   }
+  export interface Pacientes {
+    id: string;
+    nombre: string;
+    apellido: string;
+    email: string;
+    genero: string;
+    fechaNacimiento: string;
+  }
   
   export interface Access {
     role: string;
