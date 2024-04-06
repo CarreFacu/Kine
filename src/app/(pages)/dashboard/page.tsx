@@ -1,5 +1,7 @@
+import DayTracker from "@/src/app/components/DayTracker";
+
 export default function Dashboard(){
     return(
-        <h1> Pagina Dashboard</h1>
+        <h2>pagina de dashboard</h2>
     )
 }

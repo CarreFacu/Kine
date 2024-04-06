@@ -8,13 +8,26 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      gridTemplateColumns: {
+        '13': 'repeat(13, minmax(0, 1fr))',
+      },
+      colors: {
+        greenCustom: {
+          300: '#EFF1EE',
+          400: '#B2CCC0',
+          500: '#4C635A',
+          600: '#145442',
+          700: '#343A40',
+          800: '#8db819',
+        },
+        grayCustom: {
+          300: '#FBFDF9',
+          400: '#676767',
+          500: '#dad7cd'
+        },
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 };
 export default config;
