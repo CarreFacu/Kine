@@ -1,6 +1,6 @@
 
 import { UserCircleIcon } from '@heroicons/react/24/outline';
-import {UserData} from '@/src/app/utils/interfaces'
+import { UserData } from '@/src/app/utils/interfaces'
 import Image from 'next/image';
 
 export default function UserLogIn({ name, image }: UserData) {

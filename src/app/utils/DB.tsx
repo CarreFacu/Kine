@@ -1,6 +1,6 @@
-import {Pacientes} from "@/src/app/utils/interfaces";
+import { Pacientes } from "@/src/app/utils/interfaces";
 
-export const pacientes: Pacientes[] =[
+export const pacientes: Pacientes[] = [
     {
         "nombre": "John",
         "apellido": "Doe",

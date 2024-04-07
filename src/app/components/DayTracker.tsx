@@ -1,9 +1,9 @@
 
-export default  function  DayTracker ()  {
-    const today:Date = new Date();
-    const currentDay:number = today.getDate();
-    const currentWeekDay:number = today.getDay();
-    const currentMonth:number = today.getMonth();
+export default function DayTracker() {
+    const today: Date = new Date();
+    const currentDay: number = today.getDate();
+    const currentWeekDay: number = today.getDay();
+    const currentMonth: number = today.getMonth();
 
     const weekdays: string[] = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
 
@@ -21,7 +21,7 @@ export default  function  DayTracker ()  {
         'Noviembre',
         'Diciembre'
     ];
-    
+
     return (
         <div className="bg-white rounded-lg shadow-lg p-6 w-64">
             <div className="flex items-center gap-3">
