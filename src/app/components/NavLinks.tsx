@@ -24,7 +24,7 @@ const links = [
         icon: ListBulletIcon,
     },
     {
-        id: 2,
+        id: 3,
         name: 'Pacientes',
         href: '/pacientes',
         icon: UserIcon,

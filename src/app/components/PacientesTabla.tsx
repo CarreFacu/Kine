@@ -1,6 +1,10 @@
 import { pacientes } from "@/src/app/utils/DB";
 import { Pacientes } from "@/src/app/utils/interfaces";
 import Pagination from "@/src/app/components/Pagination";
+import {
+    TrashIcon,
+    PencilSquareIcon,
+} from '@heroicons/react/24/outline';
 
 export default function PacientesTabla({
     query,
@@ -21,18 +25,13 @@ export default function PacientesTabla({
         if (!query) {
             return pacientes;
         }
-        return pacientes
-        // return pacientes.filter((pacientes:Pacientes) => {
-        //     const opportunityTypeString = mapOpportunityType(period.opportunityType);
-        //     const modalityString = mapModality(period.modality);
-        //
-        //     return (
-        //         normalizeString(opportunityTypeString).includes(normalizedQuery) ||
-        //         normalizeString(modalityString).includes(normalizedQuery) ||
-        //         period.period.toString().includes(query) ||
-        //         normalizeString(period.subPeriod).includes(normalizedQuery)
-        //     );
-        // });
+        return pacientes.filter((paciente: Pacientes) => {
+            return (
+                paciente.nombre.includes(normalizedQuery) ||
+                paciente.apellido.includes(normalizedQuery) ||
+                paciente.email.includes(normalizedQuery)
+            );
+        });
     }
 
     const ITEMS_PER_PAGE = 10;
@@ -46,7 +45,6 @@ export default function PacientesTabla({
     return (
         <div>
             <div className="container mx-auto px-4 ">
-                <h1 className="text-2xl font-bold mb-4">Pacientes</h1>
                 <table className="min-w-full text-left text-sm text-gray-500 rounded-3xl">
                     <thead className="border-2 border-b-greenCustom-400 bg-gray-50 text-xs text-gray-700">
                         <tr>
@@ -68,7 +66,10 @@ export default function PacientesTabla({
                                 <td className="px-6 py-4 whitespace-nowrap bg-gray-100">{paciente.fechaNacimiento}</td>
                                 <td className="px-6 py-4 whitespace-nowrap bg-gray-100">{paciente.email}</td>
                                 <td className="px-6 py-4 whitespace-nowrap bg-gray-100">{paciente.genero}</td>
-                                <td className="px-6 py-4 whitespace-nowrap bg-gray-100">{paciente.id}</td>
+                                <td className="px-6 py-4 whitespace-nowrap bg-gray-100 flex gap-3">
+                                    <div><PencilSquareIcon className="h-5 w-5 cursor-pointer text-greenCustom-600" /></div>
+                                    <div> <TrashIcon className="h-5 w-5 cursor-pointer text-red-500" /></div>
+                                </td>
                             </tr>
                         ))}
                     </tbody>
