@@ -21,7 +21,7 @@ export default function RootLayout({
                   <SideNav />
               </div>
 
-              <div className="md:pd-12 flex-grow p-6 md:overflow-y-auto">
+              <div className="md:pd-12 flex-grow p-6 md:overflow-y-auto w-[80%]">
                   {children}
               </div>
           </div>

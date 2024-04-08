@@ -8,7 +8,7 @@ export interface User {
   accesses: Access[];
 }
 export interface Pacientes {
-  id: string;
+  id?: string;
   nombre: string;
   apellido: string;
   email: string;
@@ -36,4 +36,9 @@ export interface ButtonProps
 export interface PaginationProps {
   totalPages: number;
   onPageChange: (pageNumber: number) => void;
+}
+
+export interface handleFormPaciente {
+  onSubmit: (paciente: Pacientes) => void;
+  pacienteData?: Pacientes
 }
