@@ -2,10 +2,15 @@
 import { useState, useEffect } from 'react';
 import { handleFormPaciente } from '@/src/app/utils/interfaces';
 import { generos } from '@/src/app/utils/mappingFunctions';
+import {Typography} from "@mui/material";
+import DatePicker from "@/src/app/components/DatePickerValue";
 export function PacienteForm({
     onSubmit,
     pacienteData,
 }: handleFormPaciente) {
+    const handleDateChange = (name: string, value: string) => {
+        setPaciente({ ...paciente, [name]: value });
+    };
     const [paciente, setPaciente] = useState(pacienteData || {
         nombre: '',
         apellido: '',
@@ -38,7 +43,7 @@ export function PacienteForm({
                         htmlFor="opportunity"
                         className="mb-2 block text-sm font-medium"
                     >
-                        Nombre del paciente
+                        Nombre
                     </label>
                     <div className="relative">
                         <input
@@ -57,7 +62,7 @@ export function PacienteForm({
                         htmlFor="opportunity"
                         className="mb-2 block text-sm font-medium"
                     >
-                        Apellido del paciente
+                        Apellido
                     </label>
                     <div className="relative">
                         <input
@@ -76,7 +81,7 @@ export function PacienteForm({
                         htmlFor="opportunity"
                         className="mb-2 block text-sm font-medium"
                     >
-                        Email del paciente
+                        Email
                     </label>
                     <div className="relative">
                         <input
@@ -94,7 +99,7 @@ export function PacienteForm({
                         htmlFor="genero"
                         className="mb-2 block text-sm font-medium"
                     >
-                        Genero del paciente
+                        Genero
                     </label>
                     <div className="relative">
                         <select
@@ -114,10 +119,39 @@ export function PacienteForm({
                             ))}
                         </select>
                     </div>
+                    <div className="mb-6">
+                        <label
+                            htmlFor="email"
+                            className="mb-2 block text-sm font-medium"
+                        >
+                            Email
+                        </label>
+                        <div className="relative">
+                            <input
+                                id="email"
+                                name="email"
+                                type="email"
+                                value={paciente.email}
+                                onChange={handleChange}
+                                className="peer block w-full rounded-lg border-2 border-gray-200 py-[9px] text-sm outline-2 placeholder:text-gray-500"
+                            />
+                        </div>
+                    </div>
+                    <div className="mb-6">
+                        <label
+                            htmlFor="fecha de nacimiento"
+                            className="mb-2 block text-sm font-medium"
+                        >
+                            Fecha de Nacimiento
+                        </label>
+                        <div className="relative">
+                            <DatePicker onDateChange={(value:any) => handleChange(value)}/>
+                        </div>
+                    </div>
                 </div>
                 <button type="submit">{isEditing ? 'Update' : 'Create'}</button>
             </div>
 
         </form>
     );
-};
+}

@@ -2,6 +2,9 @@
 "use client"
 import { PacienteForm } from '@/src/app/components/PacienteForm';
 import { Pacientes } from '@/src/app/utils/interfaces';
+import Title from "@/src/app/components/Title";
+import React from "react";
+import Breadcrumbs from "@/src/app/components/BreadCrumbs";
 
 export default function FormPaciente ({params} : {params: {formPacientes: string}})  {
   const { formPacientes } = params;
@@ -10,9 +13,24 @@ console.log('no se llamo a esta pagina ?', formPacientes)
     // Lógica para actualizar un usuario existente (por ejemplo, enviar a la API)
     console.log('Actualizando usuario:', paciente);
   };
-  // Si no hay un id, es una creación, de lo contrario, es una edición
+
   if (formPacientes === "new") {
-    return <PacienteForm onSubmit={handleForm}/>;
+    return (
+        <main>
+            <Breadcrumbs
+                breadcrumbs={[
+                    { label: 'Paciente', href: '/pacientes' },
+                    {
+                        label: 'Crear paciente',
+                        href: '/pacientes/new',
+                        active: true,
+                    },
+                ]}
+            />
+            <PacienteForm onSubmit={handleForm}/>
+        </main>
+)
+        ;
   } else {
     // Aquí puedes cargar los datos del usuario según el id de la API
     const paciente = {
@@ -22,6 +40,11 @@ console.log('no se llamo a esta pagina ?', formPacientes)
         genero: 'masculino',
         fechaNacimiento: '1990-03-25',
     };
-    return <PacienteForm onSubmit={handleForm} pacienteData={paciente}/>;
+    return (
+        <main>
+            <Title title="Actualizar paciente" />
+            <PacienteForm onSubmit={handleForm} pacienteData={paciente}/>
+        </main>
+    );
   }
 };
