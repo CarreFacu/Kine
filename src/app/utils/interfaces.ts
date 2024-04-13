@@ -15,6 +15,15 @@ export interface Pacientes {
   genero: string;
   fechaNacimiento: string;
 }
+export interface Turnos {
+  id?: string;
+  nombre: string;
+  apellido: string;
+  email: string;
+  horaTurno: string;
+  celular: string;
+  tipoTurno: string;
+}
 
 export interface Access {
   role: string;

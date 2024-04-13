@@ -1,4 +1,4 @@
-import { Pacientes } from "@/src/app/utils/interfaces";
+import {Pacientes, Turnos} from "@/src/app/utils/interfaces";
 
 export const pacientes: Pacientes[] = [
     {
@@ -240,5 +240,128 @@ export const pacientes: Pacientes[] = [
         "email": "ellacarter@example.com",
         "genero": "Female",
         "id": "5678901234"
+    }
+]
+
+export const turnos: Turnos[] = [
+    {
+        "nombre": "John",
+        "apellido": "Doe",
+        "tipoTurno": "Checkup",
+        "horaTurno": "10:00 AM",
+        "email": "john.doe@example.com",
+        "celular": "123456789"
+    },
+    {
+        "nombre": "Jane",
+        "apellido": "Smith",
+        "tipoTurno": "Dental",
+        "horaTurno": "2:30 PM",
+        "email": "jane.smith@example.com",
+        "celular": "987654321"
+    },
+    {
+        "nombre": "Michael",
+        "apellido": "Johnson",
+        "tipoTurno": "Eye Exam",
+        "horaTurno": "11:45 AM",
+        "email": "michael.johnson@example.com",
+        "celular": "456789123"
+    },
+    {
+        "nombre": "Emily",
+        "apellido": "Davis",
+        "tipoTurno": "Physical",
+        "horaTurno": "9:15 AM",
+        "email": "emily.davis@example.com",
+        "celular": "789123456"
+    },
+    {
+        "nombre": "Daniel",
+        "apellido": "Wilson",
+        "tipoTurno": "Dental",
+        "horaTurno": "3:00 PM",
+        "email": "daniel.wilson@example.com",
+        "celular": "321654987"
+    },
+    {
+        "nombre": "Olivia",
+        "apellido": "Brown",
+        "tipoTurno": "Checkup",
+        "horaTurno": "1:30 PM",
+        "email": "olivia.brown@example.com",
+        "celular": "654987321"
+    },
+    {
+        "nombre": "David",
+        "apellido": "Taylor",
+        "tipoTurno": "Eye Exam",
+        "horaTurno": "12:30 PM",
+        "email": "david.taylor@example.com",
+        "celular": "987321654"
+    },
+    {
+        "nombre": "Sophia",
+        "apellido": "Anderson",
+        "tipoTurno": "Physical",
+        "horaTurno": "10:45 AM",
+        "email": "sophia.anderson@example.com",
+        "celular": "123654987"
+    },
+    {
+        "nombre": "James",
+        "apellido": "Thomas",
+        "tipoTurno": "Checkup",
+        "horaTurno": "2:15 PM",
+        "email": "james.thomas@example.com",
+        "celular": "456987321"
+    },
+    {
+        "nombre": "Ava",
+        "apellido": "Harris",
+        "tipoTurno": "Dental",
+        "horaTurno": "4:30 PM",
+        "email": "ava.harris@example.com",
+        "celular": "789321654"
+    },
+    {
+        "nombre": "Joseph",
+        "apellido": "Clark",
+        "tipoTurno": "Eye Exam",
+        "horaTurno": "11:00 AM",
+        "email": "joseph.clark@example.com",
+        "celular": "321987654"
+    },
+    {
+        "nombre": "Mia",
+        "apellido": "Lewis",
+        "tipoTurno": "Physical",
+        "horaTurno": "9:45 AM",
+        "email": "mia.lewis@example.com",
+        "celular": "654321987"
+    },
+    {
+        "nombre": "Benjamin",
+        "apellido": "Young",
+        "tipoTurno": "Checkup",
+        "horaTurno": "3:45 PM",
+        "email": "benjamin.young@example.com",
+        "celular": "987654321"
+    },
+    {
+        "nombre": "Abigail",
+        "apellido": "Hall",
+        "tipoTurno": "Dental",
+        "horaTurno": "12:00 PM",
+        "email": "abigail.hall@example.com",
+        "celular": "321987654"
+    },
+    {
+        "nombre": "Ethan",
+        "apellido": "Baker",
+        "tipoTurno": "Eye Exam",
+        "horaTurno": "1:15 PM",
+        "email": "ethan.baker@example.com",
+        "celular": "654321987"
     }
 ]

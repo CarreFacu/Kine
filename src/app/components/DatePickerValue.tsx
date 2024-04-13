@@ -11,7 +11,8 @@ export default function DatePickerValue({ onDateChange }) {
     const [value, setValue] = React.useState<Dayjs | null>(dayjs(new Date()));
     const handleDatePickerChange = (date: Dayjs | null) => {
         setValue(date);
-        onDateChange(date);
+        console.log('datos de la fecha ', date?.toISOString())
+        onDateChange(date?.toISOString());
     };
     const newTheme = (theme:any) => createTheme({
         ...theme,
