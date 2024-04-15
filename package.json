@@ -17,10 +17,12 @@
     "@mui/x-date-pickers": "^7.1.1",
     "clsx": "^2.1.0",
     "dayjs": "^1.11.10",
+    "froala-editor": "^4.2.0",
     "next": "14.1.4",
     "next-auth": "^4.24.7",
     "react": "^18",
     "react-dom": "^18",
+    "react-froala-wysiwyg": "^4.2.0",
     "use-debounce": "^10.0.0"
   },
   "devDependencies": {
