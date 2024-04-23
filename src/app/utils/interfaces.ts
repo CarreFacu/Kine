@@ -24,6 +24,11 @@ export interface Turnos {
   celular: string;
   tipoTurno: string;
 }
+export interface HistoriaClinica {
+  id?: string;
+  texto: string;
+  fechaCreacion: string;
+}
 
 export interface Access {
   role: string;
