@@ -12,7 +12,9 @@ import {HistoriaClinica, Turnos} from "@/src/app/utils/interfaces";
 import {hitoriaClinica} from "@/src/app/utils/DB";
 import {CheckBadgeIcon, PhoneIcon, XMarkIcon} from "@heroicons/react/24/outline";
 import Link from "next/link";
-export default function TunoPaciente(){
+export default function TunoPaciente({params} : {params: {idPaciente: string}}){
+    const { idPaciente } = params;
+    console.log('datos del paciente', idPaciente)
     return(
         <main>
             <div className="mb-10">
@@ -28,7 +30,7 @@ export default function TunoPaciente(){
             </div>
             <div className="flex gap-3 mt-5">
                 {hitoriaClinica.map((historiaClinica: HistoriaClinica, index: number) => (
-                    <ModalHistoriaClinica historiaClinica={historiaClinica}/>
+                    <ModalHistoriaClinica historiaClinica={historiaClinica} key={index}/>
                 ))}
 
             </div>

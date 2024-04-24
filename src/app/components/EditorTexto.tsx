@@ -6,32 +6,24 @@ import 'froala-editor/css/froala_style.min.css';
 import 'froala-editor/js/plugins/image.min'
 import {SetStateAction, useState} from "react";
 
-export default function EditorTexto({texto} : { texto : String}) {
+export default function EditorTexto({texto, readOnly=false} : { texto? : String, readOnly? : boolean}) {
     const [model, setModel] = useState(texto);
 
-    const handleModelChange = (event: SetStateAction<string>)=>{
+    const handleModelChange = (event: string)=>{
         console.log(event);
-        //setModel(event)
+        setModel(event)
     }
-    return(
-        <FroalaEditor
-            model={model}
-            onModelChange={(e: string)=> handleModelChange(e)}
-            config={{
-                placeholder: 'Escriba aqui tu diagnostico o avance de la consulta',
-                // toolbarButtons:{
-                //     moreText:{
-                //         buttons:['bold','italic','underline','strikeThrough'],
-                //     },
-                //     moreParagraph:{
-                //         buttons: ['alongLeft', 'alongRight']
-                //     },
-                //     moreRich:{
-                //         buttons:['insertHR']
-                //     }
-                // }
-            }}
-            tag="textarea" // Utiliza un textarea como base
-        />
+    return (
+            <FroalaEditor
+                model={model}
+                onModelChange={(e: string)=> handleModelChange(e)}
+                config={{
+                    toolbarInline: readOnly,
+                    toolbarSticky: false,
+                    charCounterCount: false,
+                    placeholderText: 'Escriba historia clinica aqui',
+                }}
+                tag="textarea" // Utiliza un textarea como base
+            />
     )
 }

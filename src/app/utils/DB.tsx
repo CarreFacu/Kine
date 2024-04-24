@@ -245,6 +245,7 @@ export const pacientes: Pacientes[] = [
 
 export const turnos: Turnos[] = [
     {
+        id: '1',
         "nombre": "John",
         "apellido": "Doe",
         "tipoTurno": "Checkup",
@@ -253,6 +254,7 @@ export const turnos: Turnos[] = [
         "celular": "123456789"
     },
     {
+        id: '2',
         "nombre": "Jane",
         "apellido": "Smith",
         "tipoTurno": "Dental",
@@ -261,6 +263,7 @@ export const turnos: Turnos[] = [
         "celular": "987654321"
     },
     {
+        id: '3',
         "nombre": "Michael",
         "apellido": "Johnson",
         "tipoTurno": "Eye Exam",
@@ -269,6 +272,7 @@ export const turnos: Turnos[] = [
         "celular": "456789123"
     },
     {
+        id: '4',
         "nombre": "Emily",
         "apellido": "Davis",
         "tipoTurno": "Physical",
@@ -277,6 +281,7 @@ export const turnos: Turnos[] = [
         "celular": "789123456"
     },
     {
+        id: '5',
         "nombre": "Daniel",
         "apellido": "Wilson",
         "tipoTurno": "Dental",
@@ -285,6 +290,7 @@ export const turnos: Turnos[] = [
         "celular": "321654987"
     },
     {
+        id: '6',
         "nombre": "Olivia",
         "apellido": "Brown",
         "tipoTurno": "Checkup",
@@ -293,6 +299,7 @@ export const turnos: Turnos[] = [
         "celular": "654987321"
     },
     {
+        id: '7',
         "nombre": "David",
         "apellido": "Taylor",
         "tipoTurno": "Eye Exam",
@@ -301,6 +308,7 @@ export const turnos: Turnos[] = [
         "celular": "987321654"
     },
     {
+        id: '8',
         "nombre": "Sophia",
         "apellido": "Anderson",
         "tipoTurno": "Physical",
@@ -309,6 +317,7 @@ export const turnos: Turnos[] = [
         "celular": "123654987"
     },
     {
+        id: '9',
         "nombre": "James",
         "apellido": "Thomas",
         "tipoTurno": "Checkup",
@@ -317,6 +326,7 @@ export const turnos: Turnos[] = [
         "celular": "456987321"
     },
     {
+        id: '10',
         "nombre": "Ava",
         "apellido": "Harris",
         "tipoTurno": "Dental",
@@ -325,6 +335,7 @@ export const turnos: Turnos[] = [
         "celular": "789321654"
     },
     {
+        id: '11',
         "nombre": "Joseph",
         "apellido": "Clark",
         "tipoTurno": "Eye Exam",
@@ -333,6 +344,7 @@ export const turnos: Turnos[] = [
         "celular": "321987654"
     },
     {
+        id: '12',
         "nombre": "Mia",
         "apellido": "Lewis",
         "tipoTurno": "Physical",
@@ -341,6 +353,7 @@ export const turnos: Turnos[] = [
         "celular": "654321987"
     },
     {
+        id: '13',
         "nombre": "Benjamin",
         "apellido": "Young",
         "tipoTurno": "Checkup",
@@ -349,6 +362,7 @@ export const turnos: Turnos[] = [
         "celular": "987654321"
     },
     {
+        id: '14',
         "nombre": "Abigail",
         "apellido": "Hall",
         "tipoTurno": "Dental",
@@ -357,6 +371,7 @@ export const turnos: Turnos[] = [
         "celular": "321987654"
     },
     {
+        id: '15',
         "nombre": "Ethan",
         "apellido": "Baker",
         "tipoTurno": "Eye Exam",

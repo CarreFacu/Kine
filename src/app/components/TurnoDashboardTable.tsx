@@ -69,7 +69,7 @@ export default function TurnoDashboardTable({
                             <td className="px-6 py-4 whitespace-nowrap bg-gray-100"><PhoneIcon className="h-5 w-5 cursor-pointer text-green-600"/></td>
                             <td className="px-6 py-4 whitespace-nowrap bg-gray-100">{turnos.horaTurno}</td>
                             <td className="px-6 py-4 whitespace-nowrap bg-gray-100 flex items-center gap-3">
-                                    <Link href="/pacientes/turnoPaciente" className="flex items-center">
+                                    <Link href={`/pacientes/turnoPaciente/${turnos.id}`} className="flex items-center">
                                         <CheckBadgeIcon className="h-5 w-5 cursor-pointer text-greenCustom-600" />
                                     </Link>
 
