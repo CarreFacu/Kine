@@ -16,11 +16,15 @@ export default function TunoPaciente(){
     return(
         <main>
             <div className="mb-10">
-                <Title title="Historia clinica del paciente: Cosme fulanito" />
+                <Title title="Nuevo registro de historia clinica del paciente: Cosme fulanito"/>
             </div>
 
             <div>
                 <EditorTexto/>
+            </div>
+
+            <div className="mb-10 mt-10">
+                <Title title="Historia clinica del paciente: Cosme fulanito"/>
             </div>
             <div className="flex gap-3 mt-5">
                 {hitoriaClinica.map((historiaClinica: HistoriaClinica, index: number) => (
@@ -29,7 +33,6 @@ export default function TunoPaciente(){
 
             </div>
         </main>
-
 
 
     )

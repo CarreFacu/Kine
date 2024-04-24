@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import {HistoriaClinica} from "@/src/app/utils/interfaces";
+import EditorTexto from "@/src/app/components/EditorTexto";
 
 // @ts-ignore
 export default function ModalHistoriaClinica({
@@ -19,8 +20,8 @@ export default function ModalHistoriaClinica({
 
     return (
         <>
-            <button onClick={openModal} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                Open Modal
+            <button onClick={openModal} className="bg-greenCustom-600 hover:bg-greenCustom-400 text-white font-bold py-2 px-4 rounded">
+                Fecha: {historiaClinica.fechaCreacion}
             </button>
             {isOpen && (
                 <div className="fixed z-10 inset-0 overflow-y-auto">
@@ -38,9 +39,7 @@ export default function ModalHistoriaClinica({
                                             Dia {historiaClinica.fechaCreacion}
                                         </h3>
                                         <div className="mt-2">
-                                            <p className="text-sm text-gray-500">
-                                                {historiaClinica.texto}
-                                            </p>
+                                           <EditorTexto texto={historiaClinica.texto}></EditorTexto>
                                         </div>
                                     </div>
                                 </div>
