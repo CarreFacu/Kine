@@ -27,6 +27,7 @@ export function PacienteForm({
         setPaciente({ ...paciente, [name]: value });
     };
     const handleDateChange = (name:string, value:string) => {
+        console.log('que viene aca ', value)
         setPaciente({ ...paciente, [name]: value });
     };
 

@@ -7,6 +7,8 @@ import ModalHistoriaClinica from "@/src/app/components/ModalHistoriaClinica";
 import {FiltrosHistoriaClinica,HistoriaClinica} from "@/src/app/utils/interfaces";
 import {hitoriaClinica} from "@/src/app/utils/DB";
 import {tipoHistoriaClinica} from "@/src/app/utils/mappingFunctions";
+import DatePicker from "@/src/app/components/DayPickerRangeValue";
+
 export default function TunoPaciente({params} : {params: {idPaciente: string}}){
     const { idPaciente } = params;
     console.log('datos del paciente', idPaciente)
@@ -34,8 +36,14 @@ export default function TunoPaciente({params} : {params: {idPaciente: string}}){
             <div className="mb-10 mt-10">
                 <Title title="Historia clinica del paciente: Cosme fulanito"/>
             </div>
-            <div>
+            <div className='flex justify-between align-middle'>
                 <div className="relative w-56">
+                    <label
+                        htmlFor="fecha de nacimiento"
+                        className="mb-2 block text-sm font-medium"
+                    >
+                        Tipo de Historia Clinica
+                    </label>
                     <select
                         id="tipoHistoria"
                         name="tipoHistoria"
@@ -54,6 +62,15 @@ export default function TunoPaciente({params} : {params: {idPaciente: string}}){
                             </option>
                         ))}
                     </select>
+                </div>
+                <div>
+                    <label
+                        htmlFor="fecha de nacimiento"
+                        className="mb-2 block text-sm font-medium"
+                    >
+                        Rango de Fecha
+                    </label>
+                    <DatePicker/>
                 </div>
             </div>
             <div className="flex flex-wrap gap-3 mt-5">

@@ -1,47 +1,21 @@
 import * as React from 'react';
 import dayjs, { Dayjs } from 'dayjs';
-import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import {createTheme, ThemeProvider} from '@mui/material/styles'
+import 'primereact/resources/themes/saga-green/theme.css';
+import 'primereact/resources/primereact.min.css'
 import {useState} from "react";
+import {Calendar} from "primereact/calendar";
+import { Nullable } from "primereact/ts-helpers";
 // @ts-ignore
 export default function DatePickerValue({ onDateChange }) {
-    const [value, setValue] = React.useState<Dayjs | null>(dayjs(new Date()));
-    const handleDatePickerChange = (date: Dayjs | null) => {
-        setValue(date);
-        console.log('datos de la fecha ', date?.toISOString())
-        onDateChange(date?.toISOString());
+    const [date, setDate] = useState<Nullable<Date>>(null);
+    const handleDatePickerChange = (date:any) => {
+        setDate(date);
+        console.log('datos de la fecha ', date)
+        onDateChange(date);
     };
-    const newTheme = (theme:any) => createTheme({
-        ...theme,
-        components: {
-            MuiPickersDay: {
-                styleOverrides: {
-                    root: {
-                        color: '#fdfdfd',
-                        borderRadius: '20px',
-                        borderWidth: '0px',
-                        borderColor: '#3f252b',
-                        border: '0px solid',
-                        backgroundColor: '#4C635A',
-                    }
-                }
-            },
-        }
-    })
     return (
-        <LocalizationProvider dateAdapter={AdapterDayjs}>
-            <DemoContainer components={['DatePicker']}>
-                <ThemeProvider theme={newTheme}>
-                <DatePicker
-                    label="Controlled picker"
-                    value={value}
-                    onChange={(newValue) => handleDatePickerChange(newValue)}
-                />
-                </ThemeProvider>
-            </DemoContainer>
-        </LocalizationProvider>
+        <div className="card flex justify-content-center">
+            <Calendar value={date} onChange={(newValue) => handleDatePickerChange(newValue.value)}/>
+        </div>
     );
 }
