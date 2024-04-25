@@ -42,6 +42,12 @@ export interface UserData {
   image?: string;
 }
 
+export interface FiltrosHistoriaClinica {
+  tipoHistoria: string;
+  fechaDesde?: string;
+  fechaHasta?: string;
+}
+
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;

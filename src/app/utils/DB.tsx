@@ -412,5 +412,35 @@ export const hitoriaClinica: HistoriaClinica[] =[
         texto: "<p>La <strong>historia clínica</strong> revela un cuadro de síntomas gastrointestinales persistentes, incluyendo <strong>dolor abdominal</strong>, <strong>náuseas</strong> y cambios en los <strong>hábitos intestinales</strong>. Se observa una <strong>historia de alergias alimentarias</strong> y <strong>antecedentes familiares</strong> de enfermedades digestivas. Se solicitan <strong>pruebas adicionales</strong> para confirmar el diagnóstico y planificar el tratamiento adecuado.</p>",
         fechaCreacion: "22/06/2024",
     },
+    {
+        id: "7",
+        texto: "<p>La <strong>historia clínica</strong> revela un cuadro de síntomas gastrointestinales persistentes, incluyendo <strong>dolor abdominal</strong>, <strong>náuseas</strong> y cambios en los <strong>hábitos intestinales</strong>. Se observa una <strong>historia de alergias alimentarias</strong> y <strong>antecedentes familiares</strong> de enfermedades digestivas. Se solicitan <strong>pruebas adicionales</strong> para confirmar el diagnóstico y planificar el tratamiento adecuado.</p>",
+        fechaCreacion: "22/06/2024",
+    },
+    {
+        id: "8",
+        texto: "<p>La <strong>historia clínica</strong> revela un cuadro de síntomas gastrointestinales persistentes, incluyendo <strong>dolor abdominal</strong>, <strong>náuseas</strong> y cambios en los <strong>hábitos intestinales</strong>. Se observa una <strong>historia de alergias alimentarias</strong> y <strong>antecedentes familiares</strong> de enfermedades digestivas. Se solicitan <strong>pruebas adicionales</strong> para confirmar el diagnóstico y planificar el tratamiento adecuado.</p>",
+        fechaCreacion: "22/06/2024",
+    },
+    {
+        id: "9",
+        texto: "<p>La <strong>historia clínica</strong> revela un cuadro de síntomas gastrointestinales persistentes, incluyendo <strong>dolor abdominal</strong>, <strong>náuseas</strong> y cambios en los <strong>hábitos intestinales</strong>. Se observa una <strong>historia de alergias alimentarias</strong> y <strong>antecedentes familiares</strong> de enfermedades digestivas. Se solicitan <strong>pruebas adicionales</strong> para confirmar el diagnóstico y planificar el tratamiento adecuado.</p>",
+        fechaCreacion: "22/06/2024",
+    },
+    {
+        id: "10",
+        texto: "<p>La <strong>historia clínica</strong> revela un cuadro de síntomas gastrointestinales persistentes, incluyendo <strong>dolor abdominal</strong>, <strong>náuseas</strong> y cambios en los <strong>hábitos intestinales</strong>. Se observa una <strong>historia de alergias alimentarias</strong> y <strong>antecedentes familiares</strong> de enfermedades digestivas. Se solicitan <strong>pruebas adicionales</strong> para confirmar el diagnóstico y planificar el tratamiento adecuado.</p>",
+        fechaCreacion: "22/06/2024",
+    },
+    {
+        id: "11",
+        texto: "<p>La <strong>historia clínica</strong> revela un cuadro de síntomas gastrointestinales persistentes, incluyendo <strong>dolor abdominal</strong>, <strong>náuseas</strong> y cambios en los <strong>hábitos intestinales</strong>. Se observa una <strong>historia de alergias alimentarias</strong> y <strong>antecedentes familiares</strong> de enfermedades digestivas. Se solicitan <strong>pruebas adicionales</strong> para confirmar el diagnóstico y planificar el tratamiento adecuado.</p>",
+        fechaCreacion: "22/06/2024",
+    },
+    {
+        id: "12",
+        texto: "<p>La <strong>historia clínica</strong> revela un cuadro de síntomas gastrointestinales persistentes, incluyendo <strong>dolor abdominal</strong>, <strong>náuseas</strong> y cambios en los <strong>hábitos intestinales</strong>. Se observa una <strong>historia de alergias alimentarias</strong> y <strong>antecedentes familiares</strong> de enfermedades digestivas. Se solicitan <strong>pruebas adicionales</strong> para confirmar el diagnóstico y planificar el tratamiento adecuado.</p>",
+        fechaCreacion: "22/06/2024",
+    },
 
 ]

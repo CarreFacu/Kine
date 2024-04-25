@@ -1,20 +1,26 @@
 'use client'
 import {Typography} from "@mui/material";
 import EditorTexto from '@/src/app/components/EditorTexto'
-import 'froala-editor/js/plugins.pkgd.min.js';
-import 'froala-editor/css/froala_editor.pkgd.min.css';
-import 'froala-editor/css/froala_style.min.css';
-import FroalaEditor from 'react-froala-wysiwyg';
-import React, {useEffect, useRef} from "react";
+import React, { useState} from "react";
 import Title from "@/src/app/components/Title";
 import ModalHistoriaClinica from "@/src/app/components/ModalHistoriaClinica";
-import {HistoriaClinica, Turnos} from "@/src/app/utils/interfaces";
+import {FiltrosHistoriaClinica,HistoriaClinica} from "@/src/app/utils/interfaces";
 import {hitoriaClinica} from "@/src/app/utils/DB";
-import {CheckBadgeIcon, PhoneIcon, XMarkIcon} from "@heroicons/react/24/outline";
-import Link from "next/link";
+import {tipoHistoriaClinica} from "@/src/app/utils/mappingFunctions";
 export default function TunoPaciente({params} : {params: {idPaciente: string}}){
     const { idPaciente } = params;
     console.log('datos del paciente', idPaciente)
+    const [filters, setFilters] = useState<FiltrosHistoriaClinica>(
+        {
+            tipoHistoria: '',
+            fechaDesde: '',
+            fechaHasta: ''
+        }
+    )
+    const handleSearch = (name:string, value:string) => {
+        setFilters({...filters, [name]: value } );
+    };
+    console.log(filters)
     return(
         <main>
             <div className="mb-10">
@@ -28,7 +34,30 @@ export default function TunoPaciente({params} : {params: {idPaciente: string}}){
             <div className="mb-10 mt-10">
                 <Title title="Historia clinica del paciente: Cosme fulanito"/>
             </div>
-            <div className="flex gap-3 mt-5">
+            <div>
+                <div className="relative w-56">
+                    <select
+                        id="tipoHistoria"
+                        name="tipoHistoria"
+                        className="peer block w-full cursor-pointer rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
+                        defaultValue=""
+                        onChange={(e) =>
+                            handleSearch('tipoHistoria', e.target.value)
+                        }
+                    >
+                        <option value="" disabled>
+                            Selecciona una opción
+                        </option>
+                        {tipoHistoriaClinica.map(({id, text}) => (
+                            <option key={id} value={id}>
+                                {text}
+                            </option>
+                        ))}
+                    </select>
+                </div>
+            </div>
+            <div className="flex flex-wrap gap-3 mt-5">
+
                 {hitoriaClinica.map((historiaClinica: HistoriaClinica, index: number) => (
                     <ModalHistoriaClinica historiaClinica={historiaClinica} key={index}/>
                 ))}
