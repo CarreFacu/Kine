@@ -1,0 +1,21 @@
+.p-inputtext {
+    border-radius: 6px; /* Ajusta el valor según el radio de redondeo deseado */
+    border-color: transparent;
+    height: 35px;
+}
+
+/* Agregar bordes redondeados a las celdas de los días */
+/*.p-datepicker tbody td span {*/
+/*    border-radius: 50%;*/
+/*    background-color: #4C635A;*/
+/*    color: aliceblue;*/
+/*}*/
+.p-datepicker tbody td span:hover {
+    background-color: #d8d8d8;
+    cursor: pointer;
+}
+
+.p-datepicker table td > span.p-highlight {
+    color: whitesmoke;
+    background: #4C635A;
+}

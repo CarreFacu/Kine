@@ -1,5 +1,4 @@
 'use client'
-import {Typography} from "@mui/material";
 import EditorTexto from '@/src/app/components/EditorTexto'
 import React, { useState} from "react";
 import Title from "@/src/app/components/Title";
@@ -8,21 +7,19 @@ import {FiltrosHistoriaClinica,HistoriaClinica} from "@/src/app/utils/interfaces
 import {hitoriaClinica} from "@/src/app/utils/DB";
 import {tipoHistoriaClinica} from "@/src/app/utils/mappingFunctions";
 import DatePicker from "@/src/app/components/DayPickerRangeValue";
-
+import "./Style.css";
 export default function TunoPaciente({params} : {params: {idPaciente: string}}){
     const { idPaciente } = params;
-    console.log('datos del paciente', idPaciente)
     const [filters, setFilters] = useState<FiltrosHistoriaClinica>(
         {
             tipoHistoria: '',
-            fechaDesde: '',
-            fechaHasta: ''
+            rangoFechas: '',
         }
     )
     const handleSearch = (name:string, value:string) => {
         setFilters({...filters, [name]: value } );
     };
-    console.log(filters)
+    console.log('datos del filtrado ', filters)
     return(
         <main>
             <div className="mb-10">
@@ -70,7 +67,7 @@ export default function TunoPaciente({params} : {params: {idPaciente: string}}){
                     >
                         Rango de Fecha
                     </label>
-                    <DatePicker/>
+                    <DatePicker onDateChange={(value:any) => handleSearch('rangoFechas',value)}/>
                 </div>
             </div>
             <div className="flex flex-wrap gap-3 mt-5">

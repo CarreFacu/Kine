@@ -5,7 +5,7 @@ import { Pacientes } from '@/src/app/utils/interfaces';
 import Title from "@/src/app/components/Title";
 import React from "react";
 import Breadcrumbs from "@/src/app/components/BreadCrumbs";
-
+import "./Style.css";
 export default function FormPaciente ({params} : {params: {formPacientes: string}})  {
   const { formPacientes } = params;
 console.log('no se llamo a esta pagina ?', formPacientes)

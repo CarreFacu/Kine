@@ -44,8 +44,7 @@ export interface UserData {
 
 export interface FiltrosHistoriaClinica {
   tipoHistoria: string;
-  fechaDesde?: string;
-  fechaHasta?: string;
+  rangoFechas?: any;
 }
 
 export interface ButtonProps

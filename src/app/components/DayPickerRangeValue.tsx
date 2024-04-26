@@ -10,8 +10,9 @@ export default function RangeDemo({ onDateChange }) {
     const [dates, setDates] = useState<Nullable<(Date | null)[]>>(null);
     const handleDatePickerChange = (date:any) => {
         setDates(date);
-        console.log('datos de la fecha ', date)
-        onDateChange(dates);
+        if(date[1]){
+            onDateChange(date);
+        }
     };
     console.log(dates)
     return (

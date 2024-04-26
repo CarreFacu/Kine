@@ -1,0 +1,17 @@
+.p-inputtext {
+    border-radius: 6px; /* Ajusta el valor según el radio de redondeo deseado */
+    border-width: 2px;
+    height: 40px;
+    border-color: rgb(229 231 235);
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+.p-datepicker tbody td span:hover {
+    background-color: #d8d8d8;
+    cursor: pointer;
+}
+
+.p-datepicker table td > span.p-highlight {
+    color: whitesmoke;
+    background: #4C635A;
+}
