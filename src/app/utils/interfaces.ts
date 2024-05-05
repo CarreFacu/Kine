@@ -61,3 +61,13 @@ export interface handleFormPaciente {
   onSubmit: (paciente: Pacientes) => void;
   pacienteData?: Pacientes
 }
+
+export interface handleFormTurno {
+  onSubmit: (paciente: Pacientes) => void;
+}
+
+export interface TunosProfecional {
+  fechaDesde: string;
+  fechaHasta: string;
+  duracion: number;
+}

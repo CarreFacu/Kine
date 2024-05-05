@@ -1,4 +1,4 @@
-import {HistoriaClinica, Pacientes, Turnos} from "@/src/app/utils/interfaces";
+import {HistoriaClinica, Pacientes, TunosProfecional, Turnos} from "@/src/app/utils/interfaces";
 
 export const pacientes: Pacientes[] = [
     {
@@ -444,3 +444,101 @@ export const hitoriaClinica: HistoriaClinica[] =[
     },
 
 ]
+
+export const tunosProfecional: TunosProfecional[]= [
+    {
+        fechaDesde: '2024-05-10T09:00:00',
+        fechaHasta: '2024-05-10T10:00:00',
+        duracion: 60,
+    },
+    {
+        fechaDesde: '2024-05-10T10:30:00',
+        fechaHasta: '2024-05-10T11:30:00',
+        duracion: 60,
+    },
+    {
+        fechaDesde: '2024-05-10T11:30:00',
+        fechaHasta: '2024-05-10T12:30:00',
+        duracion: 60,
+    },
+    {
+        fechaDesde: '2024-05-10T12:30:00',
+        fechaHasta: '2024-05-10T13:30:00',
+        duracion: 60,
+    },    {
+        fechaDesde: '2024-05-10T13:30:00',
+        fechaHasta: '2024-05-10T14:30:00',
+        duracion: 60,
+    },
+    {
+        fechaDesde: '2024-05-10T14:30:00',
+        fechaHasta: '2024-05-10T15:30:00',
+        duracion: 60,
+    },
+
+    {
+        fechaDesde: '2024-05-11T09:00:00',
+        fechaHasta: '2024-05-11T10:00:00',
+        duracion: 60,
+    },
+    {
+        fechaDesde: '2024-05-11T10:30:00',
+        fechaHasta: '2024-05-11T11:30:00',
+        duracion: 60,
+    },
+    {
+        fechaDesde: '2024-05-12T09:00:00',
+        fechaHasta: '2024-05-12T10:00:00',
+        duracion: 60,
+    },
+    {
+        fechaDesde: '2024-05-12T10:30:00',
+        fechaHasta: '2024-05-12T11:30:00',
+        duracion: 60,
+    },
+    {
+        fechaDesde: '2024-05-13T09:00:00',
+        fechaHasta: '2024-05-13T10:00:00',
+        duracion: 60,
+    },
+    {
+        fechaDesde: '2024-05-13T10:30:00',
+        fechaHasta: '2024-05-13T11:30:00',
+        duracion: 60,
+    },
+    {
+        fechaDesde: '2024-05-14T09:00:00',
+        fechaHasta: '2024-05-14T10:00:00',
+        duracion: 60,
+    },
+    {
+        fechaDesde: '2024-05-14T10:30:00',
+        fechaHasta: '2024-05-14T11:30:00',
+        duracion: 60,
+    },
+    {
+        fechaDesde: '2024-05-15T09:00:00',
+        fechaHasta: '2024-05-15T10:00:00',
+        duracion: 60,
+    },
+    {
+        fechaDesde: '2024-05-15T10:30:00',
+        fechaHasta: '2024-05-15T11:30:00',
+        duracion: 60,
+    },
+    {
+        fechaDesde: '2024-05-16T09:00:00',
+        fechaHasta: '2024-05-16T10:00:00',
+        duracion: 60,
+    },
+    {
+        fechaDesde: '2024-05-16T10:30:00',
+        fechaHasta: '2024-05-16T11:30:00',
+        duracion: 60,
+    },
+    {
+        fechaDesde: '2024-05-17T09:00:00',
+        fechaHasta: '2024-05-17T10:00:00',
+        duracion: 60,
+    },
+];
