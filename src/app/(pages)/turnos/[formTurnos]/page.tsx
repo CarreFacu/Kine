@@ -19,7 +19,7 @@ export default function FromTurnosPage ()  {
     return (
             <main>
                 <form onSubmit={handleSubmit} className="px-5 py-3 w-[100%] flex flex-col ">
-                    <div className="rounded-md bg-gray-50 p-4 md:p-6  flex-1">
+                    <div className="rounded-md bg-gray-50 p-4 md:p-6  flex-1 mb-10">
                         <div className="mb-6">
                             <label
                                 htmlFor="genero"
@@ -54,9 +54,12 @@ export default function FromTurnosPage ()  {
                             <Button type="submit">Buscar</Button>
                         </div>
                     </div>
+                    <div className="rounded-md bg-gray-50 p-4 md:p-6  flex-1">
+                        <FormTurnos/>
+                    </div>
 
                 </form>
-                <FormTurnos/>
+
             </main>
         )
 };

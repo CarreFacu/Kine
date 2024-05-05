@@ -7,7 +7,6 @@ import {useState} from "react";
 export function FormTurnos() {
     // Configura el localizador de fechas de moment.js
     const localizer = momentLocalizer(moment);
-    const [currentDate, setCurrentDate] = useState(new Date());
     // Genera los eventos del calendario basados en los datos de disponibilidad de los profesionales
     let eventosDisponibilidad = tunosProfecional.map((disponible) => ({
         title: 'Disponible',
@@ -18,14 +17,12 @@ export function FormTurnos() {
         // Maneja el cambio de vista y la fecha seleccionada
         console.log('Vista cambiada:', view);
         console.log('Fecha seleccionada:', date);
-        setCurrentDate(date);
     };
 
     return (
         <div>
             <Calendar
                 localizer={localizer}
-                date={currentDate} // Establece la fecha actual del calendario
                 events={eventosDisponibilidad} // Pasa los eventos al calendario
                 onNavigate={handleNavigate} // Manejo del cambio de vista
                 style={{ height: 500 }}
